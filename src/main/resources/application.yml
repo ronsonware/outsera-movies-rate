@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: movies-reate
+  datasource:
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+      javax:
+        persistence:
+          processing:
+            querydsl: true
+  sql:
+    init:
+      platform: postgres
+
+logging:
+  level:
+    org:
+      springframework: DEBUG
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
